@@ -52,7 +52,7 @@ export default function Experience(){
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="workdescription">
                 Description
             </label>
-            <textarea required onChange={e=>FormChange(index,e)} value={w.workdescription} rows={5} cols={40} className="appearance-none resize block  bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="workdescription" type="text" placeholder="Use semicolon(;) to display content in separate line in resume"/>
+            <textarea required onChange={e=>FormChange(index,e)} value={w.workdescription} rows={5} cols={40} className="appearance-none resize block max-w-full md:max-w-2xl bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="workdescription" type="text" placeholder="Use semicolon(;) to display content in separate line in resume"/>
             </div>
             <div className="w-full md:w-1/2 px-3 my-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="workyear">
