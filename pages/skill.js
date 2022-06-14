@@ -2,7 +2,7 @@ import { useState ,useEffect} from "react"
 
 export default function Skill(){
 
-    const [skill,setSkill]=useState([]);
+    const [skill,setSkill]=useState();
     const [resume,setResume]=useState({});
 
     useEffect(() => {
@@ -21,9 +21,9 @@ export default function Skill(){
         resume.skills=[];
         
         skill=skill.split(";");
-        resume.skills.push(skill);
+        resume.skills=skill;
         localStorage.setItem('resume',JSON.stringify(resume));
-        setSkill([]);
+        setSkill();
         alert('Successfully submitted');
     }
     return(
