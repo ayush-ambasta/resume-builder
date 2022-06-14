@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <>
-    <div className="flex justify-center">
+    <div className="flex justify-center mx-2">
     <form className="w-full max-w-lg" onSubmit={handleSubmit}>
     <div className="font-bold text-2xl text-center my-2">Basic Information</div>
       <div className="flex flex-wrap -mx-3 mb-6">

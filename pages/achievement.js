@@ -37,7 +37,7 @@ export default function Achievement(){
     }
     return(
         <>
-        <div className="flex justify-center">
+        <div className="flex justify-center mx-2">
         <form className="w-full max-w-lg" onSubmit={handleSubmit}>
         <div className="font-bold text-2xl text-center my-2">Achievements</div>
         {achievement.map((a,index)=>{

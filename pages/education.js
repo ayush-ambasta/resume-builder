@@ -36,7 +36,7 @@ export default function Education(){
     }
     return(
         <>
-        <div className="flex justify-center">
+        <div className="flex justify-center mx-2">
         <form className="w-full max-w-lg" onSubmit={handleSubmit}>
         <div className="font-bold text-2xl text-center my-2">Education Information</div>
         {education.map((edu,index)=>{
