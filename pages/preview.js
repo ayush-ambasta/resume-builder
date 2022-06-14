@@ -1,4 +1,4 @@
-import { Template } from "../Components/Template";
+import { Template } from "../components/Template";
 
 
 export default function Preview(){

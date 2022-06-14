@@ -25,7 +25,7 @@ export const Navbar = () => {
         </ul>
       </div>
     </div>
-    <Script>
+    <Script id="my-script">
       {`
         prevScroll = window.pageYOffset;
         window.onscroll = function() {

@@ -24,7 +24,7 @@ export const Template = () => {
             <div>
                 <div className='flex gap-4'>
                     <div className='profile-img'>
-                        <Image className="rounded-full" src={resume.image || "/profile.jpg"} width={110} height={110}/>
+                        <Image className="rounded-full" alt='profile-pic' src={resume.image || "/profile.jpg"} width={110} height={110}/>
                     </div>
                     <div className='flex flex-col gap-2 my-2'>
                         <h1 className="font-bold text-4xl">
@@ -43,9 +43,9 @@ export const Template = () => {
                     EDUCATION
                     <hr/>
                 </h2>
-                {resume.edu && resume.edu.map((edu)=>{
+                {resume.edu && resume.edu.map((edu,index)=>{
                     return(
-                        <div className='flex justify-between my-1'>
+                        <div className='flex justify-between my-1' key={index}>
                                 <ul>
                                 <li>
                                     <h3 className='font-bold'>
@@ -72,9 +72,9 @@ export const Template = () => {
                     <hr/>
                 </h2>
                 <div>
-                {resume.projects && resume.projects.map((project)=>{
+                {resume.projects && resume.projects.map((project,index)=>{
                     return(
-                        <div className='my-1'>
+                        <div className='my-1' key={index}>
                             <h3 className='font-bold'>{project.title}</h3>
                             <ul className='list-disc mx-5'>
                                 {project.description.map((desc,index)=>{
@@ -104,15 +104,15 @@ export const Template = () => {
                     <hr/>
                 </h2>
                 <div>
-                {resume.workexp && resume.workexp.map((exp)=>{
+                {resume.workexp && resume.workexp.map((exp,index)=>{
                     return(
-                        <div className='flex justify-between my-1'>
+                        <div className='flex justify-between my-1' key={index}>
                             
                             <ul className='list-disc mx-5'>
                                 <h3 className='font-bold -mx-5'>{exp.worktitle}</h3>
-                                {exp.workdescription.map((desc)=>{
+                                {exp.workdescription.map((desc,index)=>{
                                     return(
-                                        <li>
+                                        <li key={index}>
                                             {desc}
                                         </li>
                                     )
@@ -135,9 +135,9 @@ export const Template = () => {
                 </h2>
                 <div>
                 <ul className='list-disc mx-5'>
-                {resume.skills && resume.skills.map((skill)=>{
+                {resume.skills && resume.skills.map((skill,index)=>{
                     return(
-                        <li>
+                        <li key={index}>
                             {skill}
                         </li>
                     )
@@ -152,9 +152,9 @@ export const Template = () => {
                 </h2>
                 <div>
                 <ul className='list-disc mx-5'>
-                {resume.achievements && resume.achievements.map((a)=>{
+                {resume.achievements && resume.achievements.map((a,index)=>{
                     return(
-                        <li>
+                        <li key={index}>
                         {
                             (a.link) ? <a className="text-blue-500" href={a.link}>{a.achievementtitle}</a>:`${a.achievementtitle}`
                         }
