@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 
-export default function education(){
+export default function Education(){
 
     const [education,setEducation]=useState([{institute:"",course:"",cgpa:"",year:""}]);
     const [resume,setResume]=useState({});

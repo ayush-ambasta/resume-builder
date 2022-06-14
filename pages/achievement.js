@@ -1,6 +1,6 @@
 import { useState ,useEffect} from "react"
 
-export default function achievement(){
+export default function Achievement(){
 
     const [achievement,setAchievement]=useState([{achievementtitle:"",link:""}]);
     const [resume,setResume]=useState({});

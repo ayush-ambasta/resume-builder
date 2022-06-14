@@ -1,6 +1,6 @@
 import { useState ,useEffect} from "react"
 
-export default function project(){
+export default function Project(){
 
     const [project,setProject]=useState([{title:"",description:[],githublink:"",hostlink:""}]);
     const [resume,setResume]=useState({});

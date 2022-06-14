@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 
-export default function experience(){
+export default function Experience(){
 
     const [work,setWork]=useState([{worktitle:"",workdescription:[],workyear:""}]);
     const [resume,setResume]=useState({});

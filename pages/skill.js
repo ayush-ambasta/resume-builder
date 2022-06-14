@@ -1,6 +1,6 @@
 import { useState ,useEffect} from "react"
 
-export default function skill(){
+export default function Skill(){
 
     const [skill,setSkill]=useState([]);
     const [resume,setResume]=useState({});

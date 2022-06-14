@@ -1,7 +1,7 @@
 import { Template } from "../Components/Template";
 
 
-export default function preview(){
+export default function Preview(){
 
     return(
         <Template/>
