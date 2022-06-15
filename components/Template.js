@@ -98,7 +98,7 @@ export const Template = () => {
                 })}
                 </div>
             </div>
-            <div>
+            <div className={(resume.workexp) ? `block`:`hidden`}>
             <h2 className='font-bold text-xl'>
                     WORK EXPERIENCE
                     <hr/>
