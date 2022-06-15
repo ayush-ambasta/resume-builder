@@ -12,9 +12,15 @@ export const Template = () => {
       setResume(JSON.parse(localStorage.getItem('resume')));
     }, []);
     
+    const handleReset =()=>{
+        localStorage.removeItem('resume');
+        setResume("");
+        alert('successfully reset');
+    }
     const handlePrint = useReactToPrint({
       content: () => ref.current,
     });
+
     if(!resume){
         return <div>Nothing to show</div>
     }
@@ -165,7 +171,9 @@ export const Template = () => {
                 </div>
             </div>
             </div>
-            <button onClick={handlePrint} className="my-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Print</button>
+            <div><button onClick={handleReset} className="my-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Reset</button>
+            <button onClick={handlePrint} className="my-2 mx-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Print</button>
+            </div>
         </div> 
     )
 }
