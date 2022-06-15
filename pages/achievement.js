@@ -32,7 +32,7 @@ export default function Achievement(){
             resume.achievements.push(a);
         })
         localStorage.setItem('resume',JSON.stringify(resume));
-        setAchievement({achievementtitle:"",link:""});
+        setAchievement([{achievementtitle:"",link:""}]);
         alert('Successfully submitted');
     }
     return(
